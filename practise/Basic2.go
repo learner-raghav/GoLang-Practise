@@ -11,6 +11,16 @@ func sum(array []int) int {
 	return sum1
 }
 
+//This function is to calculate the factroial of a given number.
+func factorial(n int) int {
+	sum := 1
+	for i:=1;i<=n;i++ {
+		sum *= i
+	}
+
+	return sum
+}
+
 func main(){
 
 	array := []int{1,2,3,4,5}
@@ -29,4 +39,10 @@ func main(){
 	array3 := []int{1,2,3,4,5,6,7,8,9,10}
 	ans := sum(array3)
 	fmt.Println(ans)
+
+	var n int
+
+	fmt.Scanf("%d",&n)
+	factorial := factorial(n)
+	fmt.Printf("The factorial of %d is %d\n",n,factorial)
 }
