@@ -1,6 +1,7 @@
 package wordy
 
 import (
+	"fmt"
 	"strconv"
 	"strings"
 )
@@ -27,7 +28,7 @@ func check(question string) bool {
 
 func evaluate(question string) int {
 	questionArray := strings.Split(question," ")
-
+	fmt.Println(question)
 	operandStart := 2
 	operatorStart := 1
 	for ;operatorStart < len(questionArray);{
