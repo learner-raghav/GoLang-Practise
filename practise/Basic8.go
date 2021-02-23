@@ -5,13 +5,12 @@ import (
 	"math"
 )
 
-type Vertex struct {
+type Vertex1 struct {
 	X int
 	Y int
 }
 
-
-func calculateDistance(v1 Vertex, v2 Vertex) float64 {
+func calculateDistance(v1 Vertex1, v2 Vertex1) float64 {
 	ans := math.Sqrt(math.Pow(float64((v1.X-v2.X)),2) + math.Pow(float64((v1.Y-v2.Y)),2))
 	return ans
 }
@@ -24,8 +23,8 @@ func main() {
 
 	//We might have points between which we want to calculate distance, in that case we can use struct
 
-	v1 := Vertex{2,3}
-	v2 := Vertex{6,6}
+	v1 := Vertex1{2,3}
+	v2 := Vertex1{6,6}
 
 
 	ans := calculateDistance(v1,v2)
